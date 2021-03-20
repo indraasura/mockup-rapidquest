@@ -197,11 +197,11 @@ ul{
 }
 
 .progress-bar-container{
-    width: 100%;
+    position: relative;
 }
 
 .pie-chart-1, .pie-chart-2, .pie-chart-3{
-    width: 65%;
+    width: 75%;
     position: absolute;
     transform: translateX(-50%);
 }
@@ -217,3 +217,61 @@ ul{
 .pie-chart-3{
     left: 75%;
 }
+
+.deck-container{
+    position: relative;
+    margin: 1em;
+    padding: 2em;
+}
+
+.deck-container h4{
+    margin-top: 5em;
+    font-size: .9em;
+}
+
+.slider-list{
+    margin-top: 2em;
+}
+
+.slider-list strong{
+    font-size: .8em;
+}
+
+.emp-contri-list, .interest-rate{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8em;
+    font-weight: bolder;
+    margin-bottom: 1em;
+}
+
+.emp-contri-list{
+    margin-top: 2em;
+}
+
+.navbar-container{
+    width: 100%;
+    height: 50px;
+    background: blue;
+    position: fixed;
+    bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    z-index: 2;
+}
+
+.nav-links{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.nav-links li{
+    margin: 1em;
+}
+
+.logo{
+    display: none;
+}
+
