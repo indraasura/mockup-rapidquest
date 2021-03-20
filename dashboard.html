@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./static/css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard : Swarup Hegde</title>
 </head>
 <body>
     <div class="dashboard-container">
         <!--Navbar-->
-        <div class="navbar-container">
+        <div class="navbar-container hide">
             <img class="logo" src="#" alt="logo">
             <!--Placeholder : search icon-->
             <ul class="nav-links">
@@ -41,7 +44,7 @@
         <div class="main-container">
             <div class="account-overview-container">
                 <div class="badge-container">
-                    <img class="badge" src="#" alt="user-profile-badge">
+                    <img class="badge" src="./static/images/profile.png" alt="user-profile-badge">
                     <div class="badge-text-container">
                         <h2>Hi Mike,</h2>
                         <p>welcome back.</p>
@@ -54,17 +57,20 @@
                             <h2>$19,892</h2>
                             <p>Account Balance</p>
                         </li>
-                        <li>
-                            <h4>$4000</h4>
-                            <p>Year-to-Date Contributions</p>
-                        </li>
-                        <li>
-                            <h4>$1892</h4>
-                            <p>Total Interest</p>
-                        </li>
+                        <div>
+                            <li>
+                                <h4>$4000</h4>
+                                <p>Year-to-Date Contributions</p>
+                            </li>
+                            <li>
+                                <h4>$1892</h4>
+                                <p>Total Interest</p>
+                            </li>
+                        </div>
                     </ul>
-                    <button class="expense-btn">I want to <!-- Placeholder : down icon (or psuedo-css) --></button>
-                    <ul class="recent-transaction">
+                    <button class="expense-btn">I want to... <!-- Placeholder : down icon (or psuedo-css) --></button>
+                    <ul class="recent-transactions">
+                        <h4>Recent transactions</h4>
                         <li>
                             <p class="date">2020-08-07</p>
                             <p class="transfer-action">Withdrawal Transfer to Bank-XXX11</p>
@@ -81,7 +87,7 @@
                 </div>
             </div>
             <div class="chart-section-container">
-                <h4>Retirement Income</h4>
+                <h4 class="retirement-title">Retirement Income</h4>
                 <h3>Starting Year 2056</h3>
                 <ul class="goal-stats">
                     <li>
@@ -89,18 +95,21 @@
                         <p>My Goal</p>
                         <hr>
                     </li>
-                    <li>
-                        <h2>59%</h2>
-                        <p>Goal Achieved</p>
-                        <hr>
-                    </li>
-                    <li>
-                        <h2>$300</h2>
-                        <p>Est. Monthly Income</p>
-                        <hr>
-                    </li>
+                    <div>
+                        <li>
+                            <h2>59%</h2>
+                            <p>Goal Achieved</p>
+                            <hr>
+                        </li>
+                        <li>
+                            <h2>$300</h2>
+                            <p>Est. Monthly Income</p>
+                            <hr>
+                        </li>
+                    </div>
                 </ul>
                 <div class="contributions-container">
+                    <h4>Contributions Overtime</h4>
                     <ul>
                         <li>
                             <p>Employer: </p> <!--Before: oval, Afer: amount-->
@@ -119,12 +128,15 @@
                         <ul class="details-list">
                             <li>
                                 <p><strong>Age:</strong> Under 30 <!-- Placeholder: down icon or after --></p>
+                                <hr>
                             </li>
                             <li>
                                 <p><strong>Salary:</strong> K 20 - K 30 <!-- Placeholder: down icon or after --></p>
+                                <hr>
                             </li>
                             <li>
                                 <p><strong>Gender:</strong> Male <!-- Placeholder: down icon or after --></p>
+                                <hr>
                             </li>
                         </ul>
                         <div class="progress-bar"></div>

@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+.dashboard-container{
+    height: 100vh;
+    position: relative;
+}
+
+.hide{
+    display: none;
+}
+
+.main-container{
+    position: absolute;
+}
+
+/* Account overview container styles */
+
+.account-overview-container{
+    width: 100%;
+    position: relative;
+}
+
+.badge-container{
+    position: relative;
+    display: flex;
+}
+
+.badge{
+    width: 25%;
+    border-radius: 50%;
+    margin: 1em;
+}
+
+.badge-text-container{
+    margin-top: 2em;
+}
+
+.daily-news-container{
+    position: relative;
+    background: rgb(248, 248, 248);
+    padding: 2em;
+    margin: 1em;
+    border-radius: 35px;
+}
+
+.expense-list li:first-child h2{
+    font-size: 2.3em;
+}
+
+.expense-list li{
+    margin-bottom: 1em;
+    margin-right: 1em;
+}
+
+.expense-list li p{
+    color: grey;
+    font-size: .9em;
+}
+
+.expense-list div{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.expense-btn{
+    padding: 1em 2em;
+    margin: 2em 0;
+    width: 90%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    color: white;
+    background: blue;
+    font-weight: bolder;
+    font-size: .9em;
+}
+
+.recent-transactions{
+    margin-top: 3em;
+}
+
+.date{
+    color: grey;
+    font-size: .8em;
+}
+
+.transfer-action{
+    font-size: .9em;
+    font-weight: bolder;
+}
+
+/* Chart section container styles */
+
+.chart-section-container{
+    position: relative;
+    padding: 2em;
+    margin: 1em;
+}
+
+.retirement-title{
+    font-size: .8em;
+    color: blue;
+}
+
+.goal-stats{
+    margin-top: 2em;
+}
+
+.goal-stats h2{
+    font-size: 1.4em;
+}
+
+.goal-stats p{
+    color: grey;
+    font-size: .7em;
+}
+
+.goal-stats li{
+    margin-bottom: 1em;
+}
+
+.goal-stats hr{
+    margin-top: .5em;
+    border-color: blue;
+}
+
+.goal-stats div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contributions-container{
+    margin-top: 2em;
+}
+
+.contributions-container h4{
+    font-size: .9em;
+}
+
+.contributions-container ul{
+    margin-top: 1em;
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contributions-container ul li p{
+    font-size: .7em;
+    color: grey;
+}
+
+.bar-chart-container{
+    width: 100%;
+    background: blue;
+    height: 200px;
+}
+
+.comparison-container{
+    margin-top: 2em;
+}
+
+.comparison-container p{
+    font-size: .7em;
+    color: grey;
+    font-weight: bold;
+}
+
+.details-list{
+    flex-direction: column;
+}
+
+.details-list li strong{
+    color: black;
+    margin-right: 2em;
+}
+
+.details-list li p{
+    color: black !important;
+}
+
+.details-list hr{
+    border-color: whitesmoke;
+    margin: .8em 0;
+}
+
+.progress-bar{
+    width: 100%;
+    background: seagreen;
+    height: 150px;
+}
