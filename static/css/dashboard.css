@@ -160,9 +160,12 @@ ul{
 }
 
 .bar-chart-container{
+    width: 100% !important;
+    height: 200px !important;
+}
+
+.bar-chart{
     width: 100%;
-    background: blue;
-    height: 200px;
 }
 
 .comparison-container{
@@ -193,8 +196,24 @@ ul{
     margin: .8em 0;
 }
 
-.progress-bar{
+.progress-bar-container{
     width: 100%;
-    background: seagreen;
-    height: 150px;
+}
+
+.pie-chart-1, .pie-chart-2, .pie-chart-3{
+    width: 65%;
+    position: absolute;
+    transform: translateX(-50%);
+}
+
+.pie-chart-1{
+    left: 25%;
+}
+
+.pie-chart-2{
+    left: 50%;
+}
+
+.pie-chart-3{
+    left: 75%;
 }

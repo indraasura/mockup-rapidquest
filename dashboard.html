@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./static/css/dashboard.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard : Swarup Hegde</title>
+    <link rel="stylesheet" href="./static/css/dashboard.css">
+
 </head>
+
 <body>
     <div class="dashboard-container">
         <!--Navbar-->
@@ -68,7 +72,9 @@
                             </li>
                         </div>
                     </ul>
-                    <button class="expense-btn">I want to... <!-- Placeholder : down icon (or psuedo-css) --></button>
+                    <button class="expense-btn">I want to...
+                        <!-- Placeholder : down icon (or psuedo-css) -->
+                    </button>
                     <ul class="recent-transactions">
                         <h4>Recent transactions</h4>
                         <li>
@@ -110,36 +116,177 @@
                 </ul>
                 <div class="contributions-container">
                     <h4>Contributions Overtime</h4>
-                    <ul>
-                        <li>
-                            <p>Employer: </p> <!--Before: oval, Afer: amount-->
-                        </li>
-                        <li>
-                            <p>Employee: </p> <!--Before: oval, Afer: amount-->
-                        </li>
-                        <li>
-                            <p>Total Interest: </p> <!--Before: oval, Afer: amount-->
-                        </li>
-                    </ul>
-                    <div class="bar-chart-container"></div>
+                    <div class="bar-chart-container">
+                        <canvas id="bar-chart" class="bar-chart"></canvas>
+                        <script>
+                            var ctx = document.getElementById('bar-chart').getContext('2d');
+                            var chart = new Chart(ctx, {
+                                // The type of chart we want to create
+                                type: 'bar',
+
+                                // The data for our dataset
+                                data: {
+                                    labels: [20, 25, 30, 35, 40, 45, 50],
+                                    datasets: [{
+                                        label: 'Employer',
+                                        backgroundColor: 'rgb(1, 1, 211)',
+                                        borderColor: 'rgb(1, 1, 211)',
+                                        data: [10, 20, 30, 40, 50, 60, 70]
+                                    },
+                                    {
+                                        label: 'Employee',
+                                        backgroundColor: 'rgb(103, 103, 235)',
+                                        borderColor: 'rgb(103, 103, 235)',
+                                        data: [10, 20, 30, 40, 50, 60, 70]
+                                    },
+                                    {
+                                        label: 'Total Interest',
+                                        backgroundColor: 'rgb(108, 179, 226)',
+                                        borderColor: 'rgb(108, 179, 226)',
+                                        data: [20, 40, 60, 80, 100, 120, 140]
+                                    }],
+
+                                },
+
+                                // Configuration options go here
+                                options: {
+                                    scales: {
+                                        xAxes: [{
+                                            stacked: true,
+                                        }],
+                                        yAxes: [{
+                                            stacked: true
+                                        }]
+                                    },
+                                }
+                            });
+                        </script>
+                    </div>
                     <div class="comparison-container">
                         <h4>How do I compare to my peers?</h4>
                         <p>These numbers represent current goal achievement</p>
                         <ul class="details-list">
                             <li>
-                                <p><strong>Age:</strong> Under 30 <!-- Placeholder: down icon or after --></p>
+                                <p><strong>Age:</strong> Under 30
+                                    <!-- Placeholder: down icon or after -->
+                                </p>
                                 <hr>
                             </li>
                             <li>
-                                <p><strong>Salary:</strong> K 20 - K 30 <!-- Placeholder: down icon or after --></p>
+                                <p><strong>Salary:</strong> K 20 - K 30
+                                    <!-- Placeholder: down icon or after -->
+                                </p>
                                 <hr>
                             </li>
                             <li>
-                                <p><strong>Gender:</strong> Male <!-- Placeholder: down icon or after --></p>
+                                <p><strong>Gender:</strong> Male
+                                    <!-- Placeholder: down icon or after -->
+                                </p>
                                 <hr>
                             </li>
                         </ul>
-                        <div class="progress-bar"></div>
+                        <div class="progress-bar-container">
+                            <div class="pie-chart-1">
+                                <canvas id="pie-chart-1"></canvas>
+                                <script>
+                                    new Chart(document.getElementById('pie-chart-1'), {
+                                        type: 'doughnut',
+                                        data: {
+                                            datasets: [{
+                                                data: [78, 22],
+                                                backgroundColor: [
+                                                    'rgb(13, 175, 83)',
+                                                    'white'
+                                                ]
+                                            }]
+                                        },
+                                        options: {
+                                            elements: {
+                                                center: {
+                                                    text: '78%',
+                                                    color: 'black', // Default is #000000
+                                                    fontStyle: 'Arial', // Default is Arial
+                                                    sidePadding: 20, // Default is 20 (as a percentage)
+                                                    minFontSize: 10, // Default is 20 (in px), set to false and text will not wrap.
+                                                    lineHeight: 25 // Default is 25 (in px), used for when text wraps
+                                                }
+                                            },
+                                            title: {
+                                                display: true,
+                                                text: 'Average',
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                            <div class="pie-chart-2">
+                                <canvas id="pie-chart-2"></canvas>
+                                <script>
+                                    new Chart(document.getElementById('pie-chart-2'), {
+                                        type: 'doughnut',
+                                        data: {
+                                            datasets: [{
+                                                data: [95, 5],
+                                                backgroundColor: [
+                                                    'rgb(13, 175, 83)',
+                                                    'white'
+                                                ]
+                                            }]
+                                        },
+                                        options: {
+                                            elements: {
+                                                center: {
+                                                    text: '95%',
+                                                    color: 'black', // Default is #000000
+                                                    fontStyle: 'Arial', // Default is Arial
+                                                    sidePadding: 20, // Default is 20 (as a percentage)
+                                                    minFontSize: 10, // Default is 20 (in px), set to false and text will not wrap.
+                                                    lineHeight: 25 // Default is 25 (in px), used for when text wraps
+                                                },
+                                            },
+
+                                            title: {
+                                                display: true,
+                                                text: 'Top',
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                            <div class="pie-chart-3">
+                                <canvas id="pie-chart-3"></canvas>
+                                <script>
+                                    new Chart(document.getElementById('pie-chart-3'), {
+                                        type: 'doughnut',
+                                        data: {
+                                            datasets: [{
+                                                data: [59, 41],
+                                                backgroundColor: [
+                                                    'rgb(13, 175, 83)',
+                                                    'white'
+                                                ]
+                                            }]
+                                        },
+                                        options: {
+                                            elements: {
+                                                center: {
+                                                    text: '59%',
+                                                    color: 'black', // Default is #000000
+                                                    fontStyle: 'Arial', // Default is Arial
+                                                    sidePadding: 20, // Default is 20 (as a percentage)
+                                                    minFontSize: 10, // Default is 20 (in px), set to false and text will not wrap.
+                                                    lineHeight: 25 // Default is 25 (in px), used for when text wraps
+                                                }
+                                            },
+                                            title: {
+                                                display: true,
+                                                text: 'Me',
+                                            }
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -148,5 +295,7 @@
             </div>
         </div>
     </div>
+    <script src="plugin.js"></script>
 </body>
+
 </html>
