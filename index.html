@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard : Swarup Hegde</title>
     <link rel="stylesheet" href="./static/css/dashboard.css">
@@ -15,18 +16,28 @@
 
 <body>
     <div class="dashboard-container">
+        <!--Bell icon-->
+        <i class="fa fa-bell-o bell" aria-hidden="true"></i>
         <!--Navbar-->
         <div class="navbar-container">
             <img class="logo" src="#" alt="logo">
-            <!--Placeholder : search icon-->
             <ul class="nav-links">
-                <li>ok</li>
-                <li>ok</li>
-                <li>ok</li>
-                <li>ok</li>
+                <li>
+                    <i class="fa fa-home" aria-hidden="true"></i>   
+                </li>
+                <li>
+                    <i class="fa fa-id-card-o" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-list-alt" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-user-o" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </li>
             </ul>
-            <!--Placeholder : bell icon-->
-            <!--Placeholder : exit door icon-->
         </div>
         <!--Main section-->
         <div class="main-container">
@@ -39,8 +50,8 @@
                     </div>
                 </div>
                 <div class="daily-news-container">
-                    <h4>Today</h4>
                     <ul class="expense-list">
+                        <li><h4>Today</h4></li>
                         <li>
                             <h2>$19,892</h2>
                             <p>Account Balance</p>
@@ -55,23 +66,27 @@
                                 <p>Total Interest</p>
                             </li>
                         </div>
+                        <li><button class="expense-btn">I want to...</li>
                     </ul>
-                    <button class="expense-btn">I want to...
+                    
                         <!-- Placeholder : down icon (or psuedo-css) -->
                     </button>
                     <ul class="recent-transactions">
-                        <h4>Recent transactions</h4>
+                        <h4>Recent transactions</h4><br>
                         <li>
                             <p class="date">2020-08-07</p>
                             <p class="transfer-action">Withdrawal Transfer to Bank-XXX11</p>
+                            <hr>
                         </li>
                         <li>
                             <p class="date">2020-07-21</p>
                             <p class="transfer-action">Withdrawal Transfer to Bank-XXX11</p>
+                            <hr>
                         </li>
                         <li>
                             <p class="date">2020-07-16</p>
                             <p class="transfer-action">Withdrawal Transfer to Bank-XXX11</p>
+                            <hr>
                         </li>
                     </ul>
                 </div>
