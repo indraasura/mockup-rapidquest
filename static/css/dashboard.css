@@ -229,6 +229,11 @@ ul{
     left: 75%;
 }
 
+.deck-container hr {
+    margin: 2em 0;
+    border: rgb(209, 209, 209) solid 1px;
+}
+
 .deck-container{
     position: relative;
     margin: 1em;
@@ -260,6 +265,67 @@ ul{
 
 .emp-contri-list{
     margin-top: 2em;
+}
+
+input{
+    margin-top: 1em;
+}
+
+.slider-list:before{
+    content: '12%';
+    height: 20px;
+    width: 20px;
+    background: white;
+    position: absolute;
+    padding: .5em;
+    font-size: .7em;
+    font-weight: bolder;
+    left: 88%;
+    top: 37%;
+    transform: translateX(-50%);
+}
+
+.slider-list:after{
+    content: '65';
+    height: 20px;
+    width: 20px;
+    background: white;
+    position: absolute;
+    padding: .5em;
+    font-size: .7em;
+    font-weight: bolder;
+    left: 88%;
+    top: 49%;
+    transform: translateX(-50%);
+}
+
+a{
+    text-decoration: none;
+}
+
+button{
+    border: none;
+}
+
+.update-btn{
+    background: blue;
+    padding: 1em 2em;
+    width: 100%;
+    margin: 1em 0;
+    position: relative;
+    color: white;
+    font-weight: bolder;
+    border-radius: 20px;
+}
+
+.deck-container a{
+    color: blue;
+    font-size: .8em;    
+    position: absolute;
+    left: 50%;
+    font-weight: bolder;
+    display: none;
+    transform: translateX(-50%);
 }
 
 .navbar-container{
@@ -328,5 +394,133 @@ i{
     .nav-links{
         display: flex;
         flex-direction: column;
+    }
+}
+
+
+
+/* Media queries */
+
+@media only screen and (min-width: 1600px) {
+    .navbar-container {
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bell {
+        bottom: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    .main-container {
+        position: absolute;
+        left: 25%;
+        width: 100%;
+        transform: translateX(-50%);
+    }
+
+    /* Account overview container */
+    .account-overview-container {
+        width: 25%;
+        left: 40%;
+        transform: translateX(-50%);
+    }
+
+    .badge {
+        width: 25%;
+    }
+
+    /* Chart section container */
+    .chart-section-container {
+        position: absolute;
+        width: 35%;
+        left: 55%;
+        top: 0;
+    }
+
+    .bar-chart-container {
+        height: 300px;
+    }
+
+    .details-list {
+        position: absolute;
+        top: 95%;
+        width: 20%;
+    }
+
+    .progress-bar-container {
+        margin-top: 2em;
+        left: 20%;
+    }
+
+    .pie-chart-1,
+    .pie-chart-2,
+    .pie-chart-3 {
+        width: 40%;
+    }
+
+    .pie-chart-2 {
+        left: 45%;
+    }
+
+    .pie-chart-3 {
+        left: 65%;
+    }
+
+    .comparison-container {
+        margin-top: 5em;
+    }
+
+    .comparison-container h4 {
+        font-size: 1.1em;
+        margin-bottom: .8em;
+    }
+
+    /* Deck container */
+    .deck-container {
+        position: absolute;
+        left: 100%;
+        width: 15%;
+        top: 5%;
+        padding: 2em;
+        background: rgb(248, 248, 248);
+        margin: 1em;
+        border-radius: 10px;
+    }
+
+    .deck-container h4 {
+        margin-top: 0;
+        font-size: 1em;
+    }
+
+    .slider-list li{
+        margin-bottom: 1em;
+    }
+
+    .deck-container a{
+        display: block;
+    }
+
+    .slider-list:before, .slider-list:after{
+        left: 85%;
+        font-size: .8em;
+        padding: .8em;
+    }
+
+    .slider-list:before{
+        top: 24%;
+    }
+
+    .slider-list:after{
+        top: 40%;
     }
 }
