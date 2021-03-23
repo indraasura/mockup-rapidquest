@@ -401,7 +401,61 @@ i{
 
 /* Media queries */
 
-@media only screen and (min-width: 1600px) {
+@media only screen and (min-width: 450px){
+    .progress-bar-container{
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 530px){
+    .progress-bar-container{
+        width: 70%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 600px){
+    .progress-bar-container{
+        width: 60%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 700px){
+    .main-container{
+        width: 100%;
+    }
+    .progress-bar-container{
+        width: 50%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .pie-chart-1{
+        left: 10%;
+    }
+    .pie-chart-3{
+        left: 90%;
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .progress-bar-container{
+        width: 40%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
     .navbar-container {
         width: 70px;
         height: 100%;
@@ -431,7 +485,7 @@ i{
     /* Account overview container */
     .account-overview-container {
         width: 25%;
-        left: 40%;
+        left: 45%;
         transform: translateX(-50%);
     }
 
@@ -454,30 +508,32 @@ i{
     .details-list {
         position: absolute;
         top: 95%;
-        width: 20%;
+        width: 30%;
     }
-
-    .progress-bar-container {
-        margin-top: 2em;
-        left: 20%;
+    .progress-bar-container{
+        width: 100%;
     }
 
     .pie-chart-1,
     .pie-chart-2,
     .pie-chart-3 {
-        width: 40%;
+        width: 60%;
+    }
+
+    .pie-chart-1{
+        left: 50%;
     }
 
     .pie-chart-2 {
-        left: 45%;
+        left: 70%;
     }
 
     .pie-chart-3 {
-        left: 65%;
+        left: 90%;
     }
 
     .comparison-container {
-        margin-top: 5em;
+        margin-top: 1em;
     }
 
     .comparison-container h4 {
@@ -508,6 +564,7 @@ i{
 
     .deck-container a{
         display: block;
+        font-size: .7em;
     }
 
     .slider-list:before, .slider-list:after{
@@ -522,5 +579,45 @@ i{
 
     .slider-list:after{
         top: 40%;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .progress-bar-container{
+        width: 90%;
+        left: 60%;
+    }
+}
+
+@media only screen and (min-width: 1400px){
+    .progress-bar-container{
+        width: 80%;
+        left: 60%;
+    }
+}
+
+@media only screen and (min-width: 1600px){
+    .progress-bar-container{
+        width: 70%;
+        left: 60%;
+    }
+    .comparison-container{
+        margin-top: 4em;
+    }
+}
+
+@media only screen and (min-width: 1700px){
+    .progress-bar-container{
+        width: 65%;
+        left: 55%;
+    }
+    .pie-chart-2{
+        left: 74%
+    }
+    .pie-chart-3{
+        left: 95%;
+    }
+    .comparison-container{
+        margin-top: 5em;
     }
 }
